@@ -25,6 +25,7 @@ export default function Footer() {
           { href: '#cases', label: 'Кейсы' },
           { href: '#about', label: 'О нас' },
           { href: '#cta', label: 'Контакты' },
+          { href: 'https://t.me/weshareem', label: 'Telegram' },
         ].map(({ href, label }) => (
           <li key={href}>
             <a href={href} style={{

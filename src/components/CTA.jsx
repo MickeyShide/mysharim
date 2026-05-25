@@ -74,7 +74,7 @@ export default function CTA() {
       }}>
         <BtnPrimary href="#">Отправить бриф</BtnPrimary>
         <BtnSecondary href="#">Скачать презентацию</BtnSecondary>
-        <BtnSecondary href="#">Написать в Telegram</BtnSecondary>
+        <BtnSecondary href="https://t.me/weshareem">Написать в Telegram</BtnSecondary>
       </div>
     </section>
   )
