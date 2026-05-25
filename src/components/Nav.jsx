@@ -6,6 +6,7 @@ export default function Nav() {
         className="font-mono text-[12px] tracking-[.18em] text-page-white no-underline flex items-center gap-[6px]"
       >
         <img src="/Logo_alpha.png" alt="Logo" className="h-4" />
+        //sharim
       </a>
 
       <ul className="nav-links flex gap-7 list-none">
