@@ -7,7 +7,7 @@ const floatLabels = [
 
 export default function Hero() {
   return (
-    <section className="relative mt-20 sm:mt-0 sm:min-h-screen flex flex-col justify-end px-5 pb-12 md:px-12 md:pb-16 z-[1] overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col justify-end px-5 pb-12 md:px-12 md:pb-16 z-[1] overflow-hidden">
       {/* Glowing orbs */}
       <div
         className="absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] pointer-events-none animate-orb-drift"
