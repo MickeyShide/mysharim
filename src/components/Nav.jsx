@@ -1,50 +1,19 @@
 export default function Nav() {
   return (
-    <nav
-      style={{
-        position: 'fixed',
-        top: 0, left: 0, right: 0,
-        zIndex: 500,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '20px 48px',
-        background: 'rgba(6,6,6,.55)',
-        backdropFilter: 'blur(20px)',
-        borderBottom: '1px solid var(--dim)',
-      }}
-    >
-      <a href="#" style={{
-        fontFamily: "'Space Mono', monospace",
-        fontSize: '12px',
-        letterSpacing: '.18em',
-        color: 'var(--white)',
-        textDecoration: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '6px',
-      }}>
-        <span style={{ color: 'var(--acid)', fontSize: '16px' }}>//</span>
-        SHARIM
-        <span style={{
-          fontSize: '8px',
-          letterSpacing: '.1em',
-          color: '#E0BFFF',
-          border: '1px solid rgba(224,191,255,.3)',
-          padding: '2px 6px',
-          marginLeft: '4px',
-          animation: 'badge-blink 3s ease-in-out infinite',
-        }}>
-          LIVE
-        </span>
+    <nav className="fixed top-0 left-0 right-0 z-[500] flex items-center justify-between py-4 px-5 md:py-5 md:px-12 bg-[rgba(6,6,6,0.55)] backdrop-blur-[20px] border-b border-dim">
+      <a
+        href="#"
+        className="font-mono text-[12px] tracking-[.18em] text-page-white no-underline flex items-center gap-[6px]"
+      >
+        <img src="/Logo_alpha.png" alt="Logo" className="h-4" />
       </a>
 
-      <ul style={{ display: 'flex', gap: '28px', listStyle: 'none' }} className="nav-links">
+      <ul className="nav-links flex gap-7 list-none">
         {[
-          { href: '#dept', label: 'Услуги' },
+          { href: '#dept',   label: 'Услуги' },
           { href: '#weapon', label: 'Оборудование' },
-          { href: '#cases', label: 'Кейсы' },
-          { href: '#about', label: 'О нас' },
+          { href: '#cases',  label: 'Кейсы' },
+          { href: '#about',  label: 'О нас' },
         ].map(({ href, label }) => (
           <li key={href}>
             <a href={href} className="nav-link-item">{label}</a>
@@ -52,21 +21,9 @@ export default function Nav() {
         ))}
       </ul>
 
-      <a href="#cta" style={{
-        fontFamily: "'Space Mono', monospace",
-        fontSize: '10px',
-        letterSpacing: '.1em',
-        color: '#07050d',
-        background: '#E0BFFF',
-        border: 'none',
-        padding: '10px 22px',
-        cursor: 'none',
-        textTransform: 'uppercase',
-        textDecoration: 'none',
-        transition: 'box-shadow .2s',
-      }}
-        onMouseEnter={e => e.currentTarget.style.boxShadow = '0 0 24px rgba(224,191,255,.5)'}
-        onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
+      <a
+        href="#cta"
+        className="font-mono text-[10px] tracking-[.1em] text-page-black bg-acid border-none px-[22px] py-[10px] cursor-none uppercase no-underline transition-shadow duration-200 hover:shadow-[0_0_24px_rgba(224,191,255,0.5)]"
       >
         Отправить бриф
       </a>

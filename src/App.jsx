@@ -28,22 +28,24 @@ export default function App() {
 
   return (
     <>
-      <Scanline />
-      <Cursor mouseRef={mouseRef} />
-      <StarCanvas mouseRef={mouseRef} />
-      <Nav />
-      <Hero />
-      <Ticker />
-      <UTPStrip />
-      <Departments />
-      <MarqueeSec />
-      <Weapon />
-      <Cases />
-      <About />
-      <TGSection />
-      <CTA />
-      <Footer />
-      <Squirrel />
+      <div>
+        <Scanline />
+        <Cursor mouseRef={mouseRef} />
+        <StarCanvas mouseRef={mouseRef} />
+        <Nav />
+        <Hero />
+        <Ticker />
+        <UTPStrip />
+        <Departments />
+        <MarqueeSec />
+        <Weapon />
+        <Cases />
+        <About />
+        <TGSection />
+        <CTA />
+        <Footer />
+        <Squirrel />
+      </div>
     </>
   )
 }

@@ -6,25 +6,10 @@ export default function Squirrel() {
   return (
     <div
       ref={sqRef}
-      style={{
-        position: 'fixed',
-        bottom: '20px',
-        left: '-40px',
-        zIndex: 9970,
-        pointerEvents: 'none',
-        opacity: 0,
-        transition: 'opacity .4s',
-        fontSize: '20px',
-      }}
+      className="fixed bottom-5 z-[9970] pointer-events-none opacity-0 transition-opacity duration-[400ms] text-[20px]"
+      style={{ left: '-40px' }}
     >
-      <span
-        style={{
-          fontSize: '20px',
-          display: 'block',
-          transform: 'scaleX(-1)',
-          filter: 'drop-shadow(0 0 4px rgba(224,191,255,.5))',
-        }}
-      >
+      <span className="text-[20px] block -scale-x-100 drop-shadow-[0_0_4px_rgba(224,191,255,0.5)]">
         🐿️
       </span>
     </div>

@@ -4,31 +4,20 @@ const row2 = ['СВЕТОДИОДЫ', 'РОБОРУКИ', 'ВОЛЮМЕТРИЯ'
 function MarqueeRow({ items, reverse }) {
   const doubled = [...items, ...items]
   return (
-    <div style={{
-      display: 'flex',
-      gap: '56px',
-      animation: `mq-move 20s linear infinite${reverse ? ' reverse' : ''}`,
-      whiteSpace: 'nowrap',
-      marginTop: reverse ? '12px' : 0,
-    }}>
+    <div
+      className="flex gap-14 whitespace-nowrap"
+      style={{
+        animation: `mq-move 20s linear infinite${reverse ? ' reverse' : ''}`,
+        marginTop: reverse ? '12px' : 0,
+      }}
+    >
       {doubled.map((item, i) => (
-        <div key={i} style={{
-          fontFamily: "'Bebas Neue', sans-serif",
-          fontSize: '13px',
-          letterSpacing: '.22em',
-          color: 'var(--dim3)',
-          flexShrink: 0,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '56px',
-          transition: 'color .3s',
-          cursor: 'default',
-        }}
-          onMouseEnter={e => e.currentTarget.style.color = '#E0BFFF'}
-          onMouseLeave={e => e.currentTarget.style.color = 'var(--dim3)'}
+        <div
+          key={i}
+          className="font-bebas text-[13px] tracking-[.22em] text-dim3 shrink-0 flex items-center gap-14 transition-colors duration-300 cursor-default hover:text-page-white"
         >
           {item}
-          <span style={{ width: '3px', height: '3px', borderRadius: '50%', background: '#E0BFFF', flexShrink: 0, display: 'inline-block' }} />
+          <span className="w-[3px] h-[3px] rounded-full bg-page-white shrink-0 inline-block" />
         </div>
       ))}
     </div>
@@ -37,14 +26,7 @@ function MarqueeRow({ items, reverse }) {
 
 export default function MarqueeSec() {
   return (
-    <div style={{
-      borderTop: '1px solid var(--dim)',
-      borderBottom: '1px solid var(--dim)',
-      padding: '18px 0',
-      overflow: 'hidden',
-      position: 'relative',
-      zIndex: 1,
-    }}>
+    <div className="border-t border-b border-dim py-[18px] overflow-hidden relative z-[1]">
       <MarqueeRow items={row1} reverse={false} />
       <MarqueeRow items={row2} reverse={true} />
     </div>

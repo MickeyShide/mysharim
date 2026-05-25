@@ -2,79 +2,34 @@ import { BtnPrimary, BtnSecondary } from './Hero'
 
 export default function CTA() {
   return (
-    <section style={{
-      padding: '120px 48px',
-      borderTop: '1px solid var(--dim)',
-      textAlign: 'center',
-      position: 'relative',
-      zIndex: 1,
-      overflow: 'hidden',
-    }} id="cta">
+    <section
+      className="px-5 py-16 md:px-12 md:py-[120px] border-t border-dim text-center relative z-[1] overflow-hidden"
+      id="cta"
+    >
       {/* Radial glow */}
-      <div style={{
-        position: 'absolute',
-        top: '50%', left: '50%',
-        transform: 'translate(-50%,-50%)',
-        width: '80vw', height: '80vw',
-        maxWidth: '700px', maxHeight: '700px',
-        background: 'radial-gradient(circle,rgba(224,191,255,.06) 0%,transparent 65%)',
-        pointerEvents: 'none',
-        animation: 'cta-pulse 5s ease-in-out infinite',
-      }} />
+      <div
+        className="absolute top-1/2 left-1/2 w-[80vw] h-[80vw] max-w-[700px] max-h-[700px] pointer-events-none animate-cta-pulse"
+        style={{ background: 'radial-gradient(circle,rgba(224,191,255,.06) 0%,transparent 65%)' }}
+      />
 
-      <div className="reveal" style={{
-        fontFamily: "'Space Mono', monospace",
-        fontSize: '9px',
-        letterSpacing: '.25em',
-        color: '#E0BFFF',
-        textTransform: 'uppercase',
-        marginBottom: '24px',
-      }}>
+      <div className="reveal font-mono text-[9px] tracking-[.25em] text-page-white uppercase mb-6">
         // Работаем?
       </div>
 
-      <h2 className="reveal" style={{
-        fontFamily: "'Bebas Neue', sans-serif",
-        fontSize: 'clamp(64px,11vw,150px)',
-        lineHeight: '.92',
-        marginBottom: '20px',
-      }}>
-        <span style={{
-          WebkitTextStroke: '1.5px rgba(237,234,228,.2)',
-          color: 'transparent',
-          display: 'block',
-        }}>
-          ГОТОВ
-        </span>
+      <h2 className="reveal font-bebas text-[clamp(64px,11vw,150px)] leading-[.92] mb-5">
+        <span className="cta-stroke">ГОТОВ</span>
         РАБОТАТЬ
-        <span style={{
-          WebkitTextStroke: '1.5px rgba(237,234,228,.2)',
-          color: 'transparent',
-          display: 'block',
-        }}>
-          С НАМИ?
-        </span>
+        <span className="cta-stroke">С НАМИ?</span>
       </h2>
 
-      <p className="reveal" style={{
-        fontFamily: "'Manrope', sans-serif",
-        fontSize: '13px',
-        fontWeight: 300,
-        color: 'var(--dim3)',
-        marginBottom: '52px',
-      }}>
+      <p className="reveal font-manrope text-[13px] font-light text-dim3 mb-[52px]">
         Без воды. Отправь бриф — ответим быстро.
       </p>
 
-      <div className="reveal cta-btns-row" style={{
-        display: 'flex',
-        gap: '14px',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-      }}>
-        <BtnPrimary href="#">Отправить бриф</BtnPrimary>
-        <BtnSecondary href="#">Скачать презентацию</BtnSecondary>
-        <BtnSecondary href="https://t.me/weshareem">Написать в Telegram</BtnSecondary>
+      <div className="reveal flex gap-[14px] justify-center flex-wrap max-[900px]:flex-col max-[900px]:items-center">
+        <BtnPrimary href="#" className="max-[900px]:!w-[280px]">Отправить бриф</BtnPrimary>
+        <BtnSecondary href="#" className="max-[900px]:!w-[280px]">Скачать презентацию</BtnSecondary>
+        <BtnSecondary href="https://t.me/weshareem" className="max-[900px]:!w-[280px]">Написать в Telegram</BtnSecondary>
       </div>
     </section>
   )

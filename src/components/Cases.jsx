@@ -1,92 +1,36 @@
 const cases = [
   { n: 'КЕЙС — 01', title: 'Название проекта', meta: 'Фестиваль · LED + Свет + Контент · 2024', placeholder: '[ Главный кейс ]', big: true },
-  { n: 'КЕЙС — 02', title: 'Название проекта', meta: 'Корпоратив · Трансляция · 2024', placeholder: '[ Кейс 02 ]' },
-  { n: 'КЕЙС — 03', title: 'Название проекта', meta: 'Концерт · Полный цикл · 2025', placeholder: '[ Кейс 03 ]' },
+  { n: 'КЕЙС — 02', title: 'Название проекта', meta: 'Корпоратив · Трансляция · 2024',           placeholder: '[ Кейс 02 ]' },
+  { n: 'КЕЙС — 03', title: 'Название проекта', meta: 'Концерт · Полный цикл · 2025',             placeholder: '[ Кейс 03 ]' },
 ]
 
 function CaseCard({ c }) {
   return (
-    <div className="c-card" style={{
-      background: 'var(--black)',
-      position: 'relative',
-      overflow: 'hidden',
-      cursor: 'none',
-      gridRow: c.big ? '1/3' : undefined,
-    }}>
-      <div className="c-thumb" style={{
-        width: '100%',
-        aspectRatio: c.big ? undefined : '16/10',
-        background: '#111',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-        minHeight: c.big ? '440px' : undefined,
-        height: c.big ? '100%' : undefined,
-      }}>
-        <span style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '9px',
-          color: 'var(--dim3)',
-          letterSpacing: '.15em',
-          textTransform: 'uppercase',
-          position: 'relative',
-          zIndex: 1,
-        }}>
+    <div
+      className="c-card bg-page-black relative overflow-hidden cursor-none"
+      style={{ gridRow: c.big ? '1/3' : undefined }}
+    >
+      <div
+        className="c-thumb w-full bg-[#111] flex items-center justify-center relative overflow-hidden"
+        style={{
+          aspectRatio: c.big ? undefined : '16/10',
+          minHeight: c.big ? '440px' : undefined,
+          height: c.big ? '100%' : undefined,
+        }}
+      >
+        <span className="font-mono text-[9px] text-dim3 tracking-[.15em] uppercase relative z-[1]">
           {c.placeholder}
         </span>
-        <div className="c-overlay" style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to top, rgba(6,6,6,.9) 0%, transparent 50%)',
-          opacity: 0,
-          transition: 'opacity .35s',
-          zIndex: 2,
-          display: 'flex',
-          alignItems: 'flex-end',
-          padding: '24px',
-        }}>
-          <span style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: '10px',
-            letterSpacing: '.1em',
-            color: '#E0BFFF',
-            textTransform: 'uppercase',
-          }}>
+        <div className="c-overlay absolute inset-0 bg-gradient-to-t from-[rgba(6,6,6,0.9)] to-transparent opacity-0 transition-opacity duration-[350ms] z-[2] flex items-end p-6">
+          <span className="font-mono text-[10px] tracking-[.1em] text-page-white uppercase">
             {c.big ? 'Открыть кейс →' : 'Открыть →'}
           </span>
         </div>
       </div>
-      <div style={{
-        padding: '24px 28px',
-        borderTop: '1px solid var(--dim)',
-      }}>
-        <div style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '9px',
-          color: '#E0BFFF',
-          letterSpacing: '.2em',
-          marginBottom: '8px',
-        }}>
-          {c.n}
-        </div>
-        <div style={{
-          fontFamily: "'Manrope', sans-serif",
-          fontSize: '15px',
-          fontWeight: 700,
-          marginBottom: '6px',
-        }}>
-          {c.title}
-        </div>
-        <div style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '9px',
-          color: 'var(--dim3)',
-          letterSpacing: '.08em',
-        }}>
-          {c.meta}
-        </div>
+      <div className="px-7 py-6 border-t border-dim">
+        <div className="font-mono text-[9px] text-page-white tracking-[.2em] mb-2">{c.n}</div>
+        <div className="font-manrope text-[15px] font-bold mb-[6px]">{c.title}</div>
+        <div className="font-mono text-[9px] text-dim3 tracking-[.08em]">{c.meta}</div>
       </div>
     </div>
   )
@@ -94,65 +38,31 @@ function CaseCard({ c }) {
 
 export default function Cases() {
   return (
-    <section style={{
-      padding: '96px 48px',
-      borderTop: '1px solid var(--dim)',
-      position: 'relative',
-      zIndex: 1,
-    }} id="cases">
-      <div className="reveal sec-header-row" style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        marginBottom: '64px',
-      }}>
+    <section
+      className="px-5 py-14 md:px-12 md:py-24 border-t border-dim relative z-[1]"
+      id="cases"
+    >
+      <div className="reveal flex justify-between items-end mb-16 max-[900px]:flex-col max-[900px]:items-start max-[900px]:gap-4">
         <div>
-          <div style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: '9px',
-            letterSpacing: '.25em',
-            color: 'var(--acid)',
-            textTransform: 'uppercase',
-            marginBottom: '14px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-          }}>
+          <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
             <span>//</span>Портфолио
           </div>
-          <h2 style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: 'clamp(44px,6.5vw,96px)',
-            lineHeight: '.95',
-          }}>
+          <h2 className="font-bebas text-[clamp(44px,6.5vw,96px)] leading-[.95]">
             КАК ЭТО<br />ВЫГЛЯДИТ
           </h2>
         </div>
-        <a href="#" style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '10px',
-          letterSpacing: '.1em',
-          color: 'var(--dim3)',
-          textDecoration: 'none',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '8px',
-          transition: 'color .2s, gap .2s',
-        }}
-          onMouseEnter={e => { e.currentTarget.style.color = 'var(--white)'; e.currentTarget.style.gap = '14px' }}
-          onMouseLeave={e => { e.currentTarget.style.color = 'var(--dim3)'; e.currentTarget.style.gap = '8px' }}
+        <a
+          href="#"
+          className="font-mono text-[10px] tracking-[.1em] text-dim3 no-underline flex items-center gap-2 transition-colors duration-200 hover:text-page-white"
         >
           Все кейсы →
         </a>
       </div>
 
-      <div className="reveal cases-grid-container" style={{
-        display: 'grid',
-        gridTemplateColumns: '1.5fr 1fr 1fr',
-        gridTemplateRows: 'auto auto',
-        gap: '1px',
-        background: 'var(--dim)',
-      }}>
+      <div
+        className="reveal grid bg-dim gap-px max-[900px]:grid-cols-1"
+        style={{ gridTemplateColumns: '1.5fr 1fr 1fr', gridTemplateRows: 'auto auto' }}
+      >
         {cases.map((c, i) => <CaseCard key={i} c={c} />)}
       </div>
     </section>

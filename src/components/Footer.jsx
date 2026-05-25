@@ -1,44 +1,25 @@
+const navLinks = [
+  { href: '#dept',                    label: 'Услуги' },
+  { href: '#weapon',                  label: 'Оборудование' },
+  { href: '#cases',                   label: 'Кейсы' },
+  { href: '#about',                   label: 'О нас' },
+  { href: '#cta',                     label: 'Контакты' },
+  { href: 'https://t.me/weshareem',   label: 'Telegram' },
+]
+
 export default function Footer() {
   return (
-    <footer style={{
-      borderTop: '1px solid var(--dim)',
-      padding: '36px 48px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      position: 'relative',
-      zIndex: 1,
-    }}>
-      <div style={{
-        fontFamily: "'Space Mono', monospace",
-        fontSize: '12px',
-        letterSpacing: '.15em',
-        color: 'var(--white)',
-      }}>
-        <span style={{ color: 'var(--acid)' }}>//</span>SHARIM
+    <footer className="border-t border-dim px-5 py-7 md:px-12 md:py-9 flex justify-between items-center relative z-[1] max-[900px]:flex-col max-[900px]:gap-6 max-[900px]:text-center">
+      <div className="font-mono text-[12px] tracking-[.15em] text-page-white">
+        <span className="text-acid">//</span>SHARIM
       </div>
 
-      <ul style={{ display: 'flex', gap: '28px', listStyle: 'none' }} className="f-links-row">
-        {[
-          { href: '#dept', label: 'Услуги' },
-          { href: '#weapon', label: 'Оборудование' },
-          { href: '#cases', label: 'Кейсы' },
-          { href: '#about', label: 'О нас' },
-          { href: '#cta', label: 'Контакты' },
-          { href: 'https://t.me/weshareem', label: 'Telegram' },
-        ].map(({ href, label }) => (
+      <ul className="flex gap-7 list-none flex-wrap max-[900px]:justify-center">
+        {navLinks.map(({ href, label }) => (
           <li key={href}>
-            <a href={href} style={{
-              fontFamily: "'Space Mono', monospace",
-              fontSize: '9px',
-              color: 'var(--dim3)',
-              textDecoration: 'none',
-              letterSpacing: '.1em',
-              textTransform: 'uppercase',
-              transition: 'color .2s',
-            }}
-              onMouseEnter={e => e.currentTarget.style.color = 'var(--white)'}
-              onMouseLeave={e => e.currentTarget.style.color = 'var(--dim3)'}
+            <a
+              href={href}
+              className="font-mono text-[9px] text-dim3 no-underline tracking-[.1em] uppercase transition-colors duration-200 hover:text-page-white"
             >
               {label}
             </a>
@@ -46,28 +27,14 @@ export default function Footer() {
         ))}
       </ul>
 
-      <div style={{ textAlign: 'right' }} className="f-right-col">
-        <a href="mailto:hello@mysharim.ru" style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '10px',
-          color: 'var(--dim3)',
-          letterSpacing: '.05em',
-          textDecoration: 'none',
-          transition: 'color .2s',
-          display: 'block',
-          marginBottom: '4px',
-        }}
-          onMouseEnter={e => e.currentTarget.style.color = '#E0BFFF'}
-          onMouseLeave={e => e.currentTarget.style.color = 'var(--dim3)'}
+      <div className="text-right max-[900px]:text-center">
+        <a
+          href="mailto:hello@mysharim.ru"
+          className="font-mono text-[10px] text-dim3 tracking-[.05em] no-underline block mb-1 transition-colors duration-200 hover:text-page-white"
         >
           hello@mysharim.ru
         </a>
-        <div style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '9px',
-          color: 'rgba(237,234,228,.18)',
-          letterSpacing: '.08em',
-        }}>
+        <div className="font-mono text-[9px] tracking-[.08em]" style={{ color: 'rgba(237,234,228,.18)' }}>
           © 2025 МЫ ШАРИМ — WE SHARE
         </div>
       </div>

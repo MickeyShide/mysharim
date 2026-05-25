@@ -7,7 +7,7 @@ export default function StarCanvas({ mouseRef }) {
     <canvas
       id="c"
       ref={canvasRef}
-      style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none' }}
+      className="fixed inset-0 z-0 pointer-events-none"
     />
   )
 }

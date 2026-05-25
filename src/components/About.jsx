@@ -1,92 +1,42 @@
 import { useCountUp } from '../hooks/useCountUp'
 import { BtnSecondary } from './Hero'
 
+const stats = [
+  { id: 'cnt1', label: 'Проектов' },
+  { id: 'cnt2', label: 'Партнёров' },
+  { id: 'cnt3', label: 'Городов' },
+  { id: 'cnt4', label: 'Лет в индустрии' },
+]
+
 export default function About() {
   useCountUp()
 
   return (
-    <section className="about-grid" style={{
-      padding: '96px 48px',
-      borderTop: '1px solid var(--dim)',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '80px',
-      alignItems: 'start',
-      position: 'relative',
-      zIndex: 1,
-    }} id="about">
-      <div className="about-manifesto reveal" style={{
-        fontFamily: "'Manrope', sans-serif",
-        fontSize: 'clamp(20px,2.5vw,32px)',
-        fontWeight: 800,
-        lineHeight: 1.35,
-        position: 'relative',
-      }}>
+    <section
+      className="px-5 py-14 md:px-12 md:py-24 border-t border-dim grid grid-cols-2 max-[900px]:grid-cols-1 gap-20 max-[900px]:gap-10 items-start relative z-[1]"
+      id="about"
+    >
+      <div
+        className="about-manifesto reveal font-manrope text-[clamp(20px,2.5vw,32px)] font-extrabold leading-[1.35] relative"
+      >
         Мы — <em>команда</em>, которая делает<br />
         продакшен <em>иначе.</em><br /><br />
         Не сдаём оборудование.<br />
-        Мы <span style={{ color: '#E0BFFF' }}>строим опыт.</span>
+        Мы <span className="text-page-white">строим опыт.</span>
       </div>
 
       <div className="reveal">
-        <div style={{
-          fontFamily: "'Space Mono', monospace",
-          fontSize: '9px',
-          letterSpacing: '.25em',
-          color: 'var(--acid)',
-          textTransform: 'uppercase',
-          marginBottom: '14px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px',
-        }}>
+        <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
           <span>//</span>О нас
         </div>
-        <p style={{
-          fontFamily: "'Manrope', sans-serif",
-          fontSize: '13px',
-          fontWeight: 300,
-          color: 'var(--dim4)',
-          lineHeight: 1.85,
-          marginBottom: '40px',
-        }}>
+        <p className="font-manrope text-[13px] font-light text-dim4 leading-[1.85] mb-10">
           «Мы шарим» — это не слоган. Это факт. Мы знаем индустрию изнутри, дружим с лучшими партнёрами и умеем делать так, чтобы мероприятие запоминалось. От небольшого корпоратива до многотысячного фестиваля — процесс один и тот же: чётко, красиво, с ответственностью.
         </p>
-        <div className="about-stats" style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '1px',
-          background: 'var(--dim)',
-          marginBottom: '36px',
-        }}>
-          {[
-            { id: 'cnt1', label: 'Проектов' },
-            { id: 'cnt2', label: 'Партнёров' },
-            { id: 'cnt3', label: 'Городов' },
-            { id: 'cnt4', label: 'Лет в индустрии' },
-          ].map(({ id, label }) => (
-            <div key={id} style={{
-              background: 'var(--black)',
-              padding: '24px 28px',
-            }}>
-              <div id={id} style={{
-                fontFamily: "'Bebas Neue', sans-serif",
-                fontSize: '48px',
-                lineHeight: 1,
-                color: '#E0BFFF',
-                marginBottom: '4px',
-              }}>
-                0
-              </div>
-              <div style={{
-                fontFamily: "'Space Mono', monospace",
-                fontSize: '9px',
-                letterSpacing: '.12em',
-                color: 'var(--dim3)',
-                textTransform: 'uppercase',
-              }}>
-                {label}
-              </div>
+        <div className="grid grid-cols-2 gap-px bg-dim mb-9">
+          {stats.map(({ id, label }) => (
+            <div key={id} className="bg-page-black px-7 py-6">
+              <div id={id} className="font-bebas text-[48px] leading-none text-page-white mb-1">0</div>
+              <div className="font-mono text-[9px] tracking-[.12em] text-dim3 uppercase">{label}</div>
             </div>
           ))}
         </div>

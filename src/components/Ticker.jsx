@@ -17,34 +17,14 @@ const items = [
 
 export default function Ticker() {
   return (
-    <div style={{
-      borderTop: '1px solid var(--dim)',
-      borderBottom: '1px solid var(--dim)',
-      padding: '14px 0',
-      overflow: 'hidden',
-      position: 'relative',
-      zIndex: 1,
-      background: 'var(--black)',
-    }}>
-      <div style={{
-        display: 'flex',
-        gap: 0,
-        animation: 'ticker-move 22s linear infinite',
-        whiteSpace: 'nowrap',
-      }}>
+    <div className="border-t border-b border-dim py-[14px] overflow-hidden relative z-[1] bg-page-black">
+      <div className="flex gap-0 animate-ticker-move whitespace-nowrap">
         {items.map((item, i) => (
-          <span key={i} style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: '11px',
-            letterSpacing: '.18em',
-            color: item.hi ? '#E0BFFF' : 'var(--dim3)',
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'center',
-            padding: '0 32px',
-            textTransform: 'uppercase',
-          }}>
-            {i > 0 && !item.hi && <span style={{ color: 'var(--dim2)', margin: '0 8px' }}>·</span>}
+          <span
+            key={i}
+            className={`font-mono text-[11px] tracking-[.18em] shrink-0 flex items-center px-8 uppercase ${item.hi ? 'text-page-white' : 'text-dim3'}`}
+          >
+            {i > 0 && !item.hi && <span className="text-dim2 mx-2">·</span>}
             {item.text}
           </span>
         ))}
