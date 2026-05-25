@@ -143,7 +143,7 @@ export function useCanvas(mouseRef) {
       window.removeEventListener('resize', resize)
       if (animId) cancelAnimationFrame(animId)
     }
-  }, [])
+  }, [mouseRef])
 
   return canvasRef
 }

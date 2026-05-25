@@ -36,7 +36,7 @@ export function useCursor(mouseRef) {
 
     document.addEventListener('mousemove', onMove)
 
-    const targets = document.querySelectorAll('a, button, .dept-card, .weapon-card, .c-card')
+    const targetSelector = 'a, button, .dept-card, .weapon-card, .c-card'
     const onEnter = () => {
       curRing.style.width = '64px'
       curRing.style.height = '64px'
@@ -51,20 +51,23 @@ export function useCursor(mouseRef) {
       curDot.style.width = '6px'
       curDot.style.height = '6px'
     }
-    targets.forEach(el => {
-      el.addEventListener('mouseenter', onEnter)
-      el.addEventListener('mouseleave', onLeave)
-    })
+    const onOver = (e) => {
+      if (e.target.closest(targetSelector)) onEnter()
+    }
+    const onOut = (e) => {
+      const target = e.target.closest(targetSelector)
+      if (target && !target.contains(e.relatedTarget)) onLeave()
+    }
+    document.addEventListener('mouseover', onOver)
+    document.addEventListener('mouseout', onOut)
 
     return () => {
       document.removeEventListener('mousemove', onMove)
       if (rafRef.current) cancelAnimationFrame(rafRef.current)
-      targets.forEach(el => {
-        el.removeEventListener('mouseenter', onEnter)
-        el.removeEventListener('mouseleave', onLeave)
-      })
+      document.removeEventListener('mouseover', onOver)
+      document.removeEventListener('mouseout', onOut)
     }
-  }, [])
+  }, [mouseRef])
 
   return { curElRef, curRingRef, curDotRef }
 }

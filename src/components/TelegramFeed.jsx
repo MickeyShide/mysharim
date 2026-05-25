@@ -200,7 +200,7 @@ export default function TelegramFeed() {
   }, []);
 
   useEffect(() => {
-    runCheck();
+    queueMicrotask(runCheck);
   }, [runCheck]);
 
   if (isVpnActive === null || (isChecking && isVpnActive === null)) {

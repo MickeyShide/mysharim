@@ -7,7 +7,7 @@ const PROXY_URL = import.meta.env.VITE_TG_PROXY_URL || 'https://restless-sky-91a
 const FEED_TIMEOUT = 8000
 
 function extractTags(text) {
-  return (text.match(/#[\wа-яёА-ЯЁ\-]+/g) ?? []).slice(0, 3)
+  return (text.match(/#[\wа-яёА-ЯЁ-]+/g) ?? []).slice(0, 3)
 }
 
 function formatDate(datetime) {
@@ -142,7 +142,9 @@ export default function TGSection() {
     }
   }, [])
 
-  useEffect(() => { load() }, [load])
+  useEffect(() => {
+    queueMicrotask(load)
+  }, [load])
 
   return (
     <section

@@ -32,7 +32,7 @@ export default function About() {
         <p className="font-manrope text-[13px] font-light text-dim4 leading-[1.85] mb-10">
           «Мы шарим» — это не слоган. Это факт. Мы знаем индустрию изнутри, дружим с лучшими партнёрами и умеем делать так, чтобы мероприятие запоминалось. От небольшого корпоратива до многотысячного фестиваля — процесс один и тот же: чётко, красиво, с ответственностью.
         </p>
-        <div className="grid grid-cols-2 gap-px bg-dim mb-9">
+        <div className="about-stats grid grid-cols-2 gap-px bg-dim mb-9">
           {stats.map(({ id, label }) => (
             <div key={id} className="bg-page-black px-7 py-6">
               <div id={id} className="font-bebas text-[48px] leading-none text-page-white mb-1">0</div>
