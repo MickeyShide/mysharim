@@ -37,7 +37,7 @@ export function useCanvas(mouseRef) {
         this.x = Math.random() * W
         this.y = Math.random() * H
         this.r = Math.random() * 3.5 + 1
-        this.baseAlpha = Math.random() * 0.28 + 0.04
+        this.baseAlpha = Math.random() * 0.28 + 0.34
         this.alpha = this.baseAlpha
         this.twinkleSpeed = Math.random() * 0.015 + 0.004
         this.twinkleOffset = Math.random() * Math.PI * 2

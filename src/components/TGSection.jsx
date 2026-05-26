@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { RefreshCw, Shield, Tag, Calendar, WifiOff, ExternalLink } from 'lucide-react'
 import { BtnPrimary } from './Hero'
 
-const CHANNEL = 'weshareem'
+const CHANNEL = 'lympro'
 const PROXY_URL = import.meta.env.VITE_TG_PROXY_URL || 'https://restless-sky-91a8.mickeyshide.workers.dev/'
 const FEED_TIMEOUT = 8000
 
