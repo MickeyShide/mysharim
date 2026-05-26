@@ -4,7 +4,6 @@ name: Build & Deploy
 on:
   push:
     branches: [main]
-  workflow_dispatch:
 
 env:
   CONTAINER_NAME: mysharim
