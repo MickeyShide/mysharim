@@ -18,7 +18,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Переводим имя репозитория в нижний регистр
       - name: Set lower case image name
         run: |
           IMAGE_PATH="ghcr.io/${{ github.repository_owner }}/mysharim"
