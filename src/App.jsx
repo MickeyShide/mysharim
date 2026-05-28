@@ -10,7 +10,6 @@ import UTPStrip from './components/UTPStrip'
 import Departments from './components/Departments'
 import MarqueeSec from './components/MarqueeSec'
 import Weapon from './components/Weapon'
-import Cases from './components/Cases'
 import About from './components/About'
 import TGSection from './components/TGSection'
 import CTA from './components/CTA'
@@ -34,12 +33,11 @@ export default function App() {
         <StarCanvas mouseRef={mouseRef} />
         <Nav />
         <Hero />
-        <Ticker />
-        <UTPStrip />
+        {/* <Ticker /> */}
+        {/* <UTPStrip /> */}
         <Departments />
-        <MarqueeSec />
+        {/* <MarqueeSec /> */}
         <Weapon />
-        <Cases />
         <About />
         <TGSection />
         <CTA />

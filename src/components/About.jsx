@@ -26,9 +26,9 @@ export default function About() {
       </div>
 
       <div className="reveal">
-        <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
+        {/* <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
           <span>//</span>О нас
-        </div>
+        </div> */}
         <p className="font-manrope text-[13px] font-light text-dim4 leading-[1.85] mb-10">
           «Мы шарим» — это не слоган. Это факт. Мы знаем индустрию изнутри, дружим с лучшими партнёрами и умеем делать так, чтобы мероприятие запоминалось. От небольшого корпоратива до многотысячного фестиваля — процесс один и тот же: чётко, красиво, с ответственностью.
         </p>

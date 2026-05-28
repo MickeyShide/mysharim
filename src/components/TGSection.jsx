@@ -158,14 +158,14 @@ export default function TGSection() {
       </div>
 
       <div className="reveal md:sticky md:top-24">
-        <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
+        {/* <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
           <span>//</span>Телеграм-канал
-        </div>
+        </div> */}
         <h2 className="font-bebas text-[clamp(56px,8vw,110px)] leading-[.95] mb-6">
           МЫ В<br />ТЕЛЕ&shy;ГРАМЕ
         </h2>
         <p className="font-manrope text-[13px] font-light text-dim3 leading-[1.85] mb-9 max-w-[380px]">
-          Кейсы, закулисье, оборудование и процессы — в реальном времени. Подпишись, чтобы быть в теме.
+          Закулисье, оборудование и процессы — в реальном времени. Подпишись, чтобы быть в теме.
         </p>
         <BtnPrimary href={`https://t.me/${CHANNEL}`}>→ Подписаться</BtnPrimary>
       </div>
