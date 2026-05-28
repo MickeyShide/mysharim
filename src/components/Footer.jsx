@@ -34,7 +34,7 @@ export default function Footer() {
           hello@mysharim.ru
         </a> */}
         <div className="font-mono text-[9px] tracking-[.08em]" style={{ color: 'rgba(237,234,228,.18)' }}>
-          © 2025 МЫ ШАРИМ — WE SHARE
+          © 2026 МЫ ШАРИМ
         </div>
       </div>
     </footer>
