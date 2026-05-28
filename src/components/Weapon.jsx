@@ -28,9 +28,9 @@ function WeaponCard({ weapon }) {
       <div className="font-manrope text-[12px] font-light text-dim3 leading-[1.8]">
         {weapon.desc}
       </div>
-      <span className="mt-7 inline-block font-mono text-[8px] tracking-[.15em] text-page-white border border-[rgba(224,191,255,0.3)] px-3 py-[5px] uppercase">
+      {/* <span className="mt-7 inline-block font-mono text-[8px] tracking-[.15em] text-page-white border border-[rgba(224,191,255,0.3)] px-3 py-[5px] uppercase">
         Доступно под запрос
-      </span>
+      </span> */}
     </div>
   )
 }
@@ -49,9 +49,9 @@ export default function Weapon() {
       </div>
 
       <div className="reveal">
-        <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
+        {/* <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
           <span>//</span>Эксклюзивное оборудование
-        </div>
+        </div> */}
         <h2 className="font-bebas text-[clamp(44px,6.5vw,96px)] leading-[.95]">
           ТО, ЧЕГО<br />НЕТ У ДРУГИХ
         </h2>

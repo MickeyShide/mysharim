@@ -13,7 +13,6 @@ export default function Nav() {
         {[
           { href: '#dept',   label: 'Услуги' },
           { href: '#weapon', label: 'Оборудование' },
-          { href: '#cases',  label: 'Кейсы' },
           { href: '#about',  label: 'О нас' },
         ].map(({ href, label }) => (
           <li key={href}>

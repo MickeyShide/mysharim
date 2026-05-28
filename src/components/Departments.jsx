@@ -50,7 +50,7 @@ function DeptCard({ dept }) {
       <div className="font-manrope text-[12px] font-light text-dim3 leading-[1.7] max-h-0 overflow-hidden transition-[max-height,opacity] duration-[400ms] ease-[ease] opacity-0 group-hover:max-h-[80px] group-hover:opacity-100">
         {dept.desc}
       </div>
-      <div className="flex flex-wrap gap-[5px] mt-[18px]">
+      {/* <div className="flex flex-wrap gap-[5px] mt-[18px]">
         {dept.tags.map(tag => (
           <span
             key={tag}
@@ -59,10 +59,10 @@ function DeptCard({ dept }) {
             {tag}
           </span>
         ))}
-      </div>
-      <div className="absolute bottom-7 right-7 text-[18px] text-dim2 transition-all duration-[250ms] group-hover:text-page-white group-hover:translate-x-1 group-hover:-translate-y-1">
+      </div> */}
+      {/* <div className="absolute bottom-7 right-7 text-[18px] text-dim2 transition-all duration-[250ms] group-hover:text-page-white group-hover:translate-x-1 group-hover:-translate-y-1">
         ↗
-      </div>
+      </div> */}
     </div>
   )
 }
@@ -72,19 +72,19 @@ export default function Departments() {
     <section className="relative z-[1] pt-14 md:pt-24" id="dept">
       <div className="reveal flex justify-between items-end mb-10 md:mb-16 max-[900px]:flex-col max-[900px]:items-start max-[900px]:gap-4 px-5 md:px-12">
         <div>
-          <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
+          {/* <div className="font-mono text-[9px] tracking-[.25em] text-acid uppercase mb-[14px] flex items-center gap-[10px]">
             <span>//</span>Что мы делаем
-          </div>
+          </div> */}
           <h2 className="font-bebas text-[clamp(44px,6.5vw,96px)] leading-[.95]">
             НАШИ<br />ДЕPART&shy;МЕНТЫ
           </h2>
         </div>
-        <a
+        {/* <a
           href="#cta"
           className="font-mono text-[10px] tracking-[.1em] text-dim3 no-underline flex items-center gap-2 transition-colors duration-200 hover:text-page-white"
         >
           Обсудить проект →
-        </a>
+        </a> */}
       </div>
 
       <div className="reveal grid grid-cols-3 max-[900px]:grid-cols-1 bg-dim gap-px">
