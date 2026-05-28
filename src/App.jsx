@@ -39,7 +39,7 @@ export default function App() {
         {/* <MarqueeSec /> */}
         <Weapon />
         <About />
-        <TGSection />
+        {/* <TGSection /> */}
         <CTA />
         <Footer />
         <Squirrel />
