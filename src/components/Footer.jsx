@@ -1,7 +1,6 @@
 const navLinks = [
   { href: '#dept',                    label: 'Услуги' },
   { href: '#weapon',                  label: 'Оборудование' },
-  { href: '#cases',                   label: 'Кейсы' },
   { href: '#about',                   label: 'О нас' },
   { href: '#cta',                     label: 'Контакты' },
   { href: 'https://t.me/weshareem',   label: 'Telegram' },
@@ -28,12 +27,12 @@ export default function Footer() {
       </ul>
 
       <div className="text-right max-[900px]:text-center">
-        <a
+        {/* <a
           href="mailto:hello@mysharim.ru"
           className="font-mono text-[10px] text-dim3 tracking-[.05em] no-underline block mb-1 transition-colors duration-200 hover:text-page-white"
         >
           hello@mysharim.ru
-        </a>
+        </a> */}
         <div className="font-mono text-[9px] tracking-[.08em]" style={{ color: 'rgba(237,234,228,.18)' }}>
           © 2025 МЫ ШАРИМ — WE SHARE
         </div>

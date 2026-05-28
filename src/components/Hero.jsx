@@ -19,7 +19,7 @@ export default function Hero() {
       />
 
       {/* Floating tech labels */}
-      {floatLabels.map(({ cls, text, top, right, delay, color, borderColor }) => (
+      {/* {floatLabels.map(({ cls, text, top, right, delay, color, borderColor }) => (
         <div
           key={cls}
           className="float-label-item absolute font-mono text-[9px] tracking-[.15em] px-[10px] py-[5px] pointer-events-none animate-float-idle max-[900px]:hidden"
@@ -27,16 +27,16 @@ export default function Hero() {
         >
           {text}
         </div>
-      ))}
+      ))} */}
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator
       <div
         className="absolute bottom-8 left-5 md:left-12 hidden md:flex items-center gap-3 font-mono text-[9px] tracking-[.2em] text-dim3 uppercase opacity-0 animate-hero-in"
         style={{ animationDelay: '1s' }}
       >
         <span className="w-10 h-px bg-gradient-to-r from-transparent to-page-white block animate-scroll-pulse" />
         прокрути вниз
-      </div>
+      </div> */}
 
       {/* Eyebrow */}
       <div
@@ -68,13 +68,12 @@ export default function Hero() {
         </p>
         <div className="hero-btns-col flex flex-col items-end gap-[10px] max-[900px]:items-start max-[900px]:w-full">
           <BtnPrimary href="#cta">Отправить бриф</BtnPrimary>
-          <BtnSecondary href="#cases">Смотреть кейсы</BtnSecondary>
-          <a
+          {/* <a
             href="#dept"
             className="font-mono text-[10px] tracking-[.1em] text-dim3 no-underline flex items-center gap-2 transition-colors duration-200 hover:text-page-white"
           >
             Что умеем →
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
