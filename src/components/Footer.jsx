@@ -3,7 +3,7 @@ const navLinks = [
   { href: '#weapon',                  label: 'Оборудование' },
   { href: '#about',                   label: 'О нас' },
   { href: '#cta',                     label: 'Контакты' },
-  { href: 'https://t.me/weshareem',   label: 'Telegram' },
+  { href: 'https://t.me/wisharim',   label: 'Telegram' },
 ]
 
 export default function Footer() {

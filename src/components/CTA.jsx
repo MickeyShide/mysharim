@@ -27,9 +27,9 @@ export default function CTA() {
       </p> */}
 
       <div className="reveal flex gap-[14px] justify-center flex-wrap max-[900px]:flex-col max-[900px]:items-center">
-        <BtnPrimary href={`https://t.me/weshareem`} className="max-[900px]:!w-[280px]">Отправить бриф</BtnPrimary>
+        <BtnPrimary href={`https://t.me/wisharim`} className="max-[900px]:!w-[280px]">Отправить бриф</BtnPrimary>
         {/* <BtnSecondary href="#" className="max-[900px]:!w-[280px]">Скачать презентацию</BtnSecondary> */}
-        <BtnSecondary href="https://t.me/weshareem" className="max-[900px]:!w-[280px]">Написать в Telegram</BtnSecondary>
+        <BtnSecondary href="https://t.me/wisharim" className="max-[900px]:!w-[280px]">Написать в Telegram</BtnSecondary>
       </div>
     </section>
   )
