@@ -64,7 +64,7 @@ export default function Hero() {
         <p className="font-manrope text-sm font-light leading-[1.85] text-dim4 max-w-[360px]">
           От <strong className="text-page-white font-semibold">идеи и контента</strong> — до пусконаладки<br />
           и live-трансляции. Знаем индустрию изнутри.<br />
-          <strong className="text-page-white font-semibold">С нами не проебётесь.</strong>
+          <strong className="text-page-white font-semibold">С нами будет всё чётко.</strong>
         </p>
         <div className="hero-btns-col flex flex-col items-end gap-[10px] max-[900px]:items-start max-[900px]:w-full">
           <BtnPrimary href="#cta">Отправить бриф</BtnPrimary>
